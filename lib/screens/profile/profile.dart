@@ -1,4 +1,5 @@
 import 'package:dnd_character_app/models/character.dart';
+import 'package:dnd_character_app/screens/profile/heart.dart';
 import 'package:dnd_character_app/screens/profile/skill_list.dart';
 import 'package:dnd_character_app/screens/profile/stats_table.dart';
 import 'package:dnd_character_app/services/character_store.dart';
@@ -28,28 +29,41 @@ class Profile extends StatelessWidget {
           children: [
 
             // basic info - image, vocation, description
-            Container(
-              padding: const EdgeInsets.all(16),
-              color: AppColors.secondaryColor.withAlpha(77),
-              child: Row(
-                children: [
-                  Image.asset('assets/img/vocations/${character.vocation.image}',
-                    width: 140,
-                    height: 140,
+            Stack(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  color: AppColors.secondaryColor.withAlpha(77),
+                  child: Row(
+                    children: [
+                      Hero(
+                        tag: character.id.toString(),
+                        child: Image.asset('assets/img/vocations/${character.vocation.image}',
+                          width: 140,
+                          height: 140,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            StyledHeading(character.vocation.title),
+                            StyledText(character.vocation.description),
+                          ],
+                        ),
+                      )
+                    ],
                   ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        StyledHeading(character.vocation.title),
-                        StyledText(character.vocation.description),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                ),
+                Positioned(
+                  top: 10,
+                  right: 10,
+                  child: Heart(chartacter: character)),
+              ],
             ),
+
+            
 
             // weapon and ability
             const SizedBox(height: 20),
