@@ -1,16 +1,40 @@
-# dnd_character_app
+# 🧙‍♂️ D&D Character App
 
-A new Flutter project.
+A Flutter app for creating, viewing, and managing custom Dungeons & Dragons characters. Built with clean architecture, Firestore integration, and expressive UI components.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- Create custom characters with stats, vocation, slogan, and abilities
+- View detailed profiles with stats table, skills, and equipment
+- Mark favorite characters with an animated heart
+- Dynamically increase/decrease character stats
+- Save updates to Firestore
+- Swipe to delete characters
+- Fetch characters once and avoid duplicates in memory
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** + **Dart**
+- **Cloud Firestore** for backend
+- **Provider** for state management
+- **Hero animations**, custom icons, styled buttons & text
+- Responsive design and theme customization
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Packages Used
+
+- [`cloud_firestore`](https://pub.dev/packages/cloud_firestore)
+- [`provider`](https://pub.dev/packages/provider)
+- [`uuid`](https://pub.dev/packages/uuid)
+- [`google_fonts`](https://pub.dev/packages/google_fonts)
+
+## Project Structure
+
+- `models/` – Dart classes for character, vocation, and skills
+- `services/` – Firestore integration and character state manager
+- `screens/` – UI screens (home, profile, create)
+- `shared/` – Reusable widgets and styles
+- `theme.dart` – Centralized theme and color settings
+
+## Screenshots
+
+*(Add screenshots here using the instructions below)*
