@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "413411552800",
+    "project_id": "dnd-character-app-ae487",
+    "storage_bucket": "dnd-character-app-ae487.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413411552800:android:0b80536fb5626c6d719645",
+        "android_client_info": {
+          "package_name": "com.example.dnd_character_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD__OHDVfnpbtA9Os6ujVeKLy5EbEPwuCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
